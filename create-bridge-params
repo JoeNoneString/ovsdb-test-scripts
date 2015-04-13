@@ -1,0 +1,25 @@
+params=
+
+["Open_vSwitch",
+{"rows":[{"bridges":["set",[]]}],"columns":["bridges"],"table":"Open_vSwitch","until":"==","where":[["_uuid","==",["uuid","e3fbe585-bee5-4633-b085-56d31f76e3fe"]]],"timeout":0,"op":"wait"},
+
+{"row":{"name":"br100","interfaces":["named-uuid","row7176febd_2e2f_4e02_83c7_4e55a594c2f2"]},"table":"Port","uuid-name":"row2f7a6928_837c_4b67_ba08_faec0a6f2a9d","op":"insert"},
+
+
+{"row":{"bridges":["named-uuid","row495e630f_e123_464b_bbf5_848461cd4f34"]},"table":"Open_vSwitch","where":[["_uuid","==",["uuid","e3fbe585-bee5-4633-b085-56d31f76e3fe"]]],"op":"update"},
+
+
+{"row":{"name":"br100","type":"internal"},"table":"Interface","uuid-name":"row7176febd_2e2f_4e02_83c7_4e55a594c2f2","op":"insert"},
+
+
+{"row":{"name":"br100","ports":["named-uuid","row2f7a6928_837c_4b67_ba08_faec0a6f2a9d"]},"table":"Bridge","uuid-name":"row495e630f_e123_464b_bbf5_848461cd4f34","op":"insert"},
+
+
+#{"mutations":[["next_cfg","+=",1]],"table":"Open_vSwitch","where":[["_uuid","==",["uuid","e3fbe585-bee5-4633-b085-56d31f76e3fe"]]],"op":"mutate"},
+
+#{"columns":["next_cfg"],"table":"Open_vSwitch","where":[["_uuid","==",["uuid","e3fbe585-bee5-4633-b085-56d31f76e3fe"]]],"op":"select"},
+
+#{"comment":"ovs-vsctl: ovs-vsctl -vjsonrpc add-br br100","op":"comment"}
+
+], 
+id=1
