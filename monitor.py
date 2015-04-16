@@ -12,7 +12,7 @@ print "========monitor_bridge========"
 get_schema = {"method":"monitor", "params":["Open_vSwitch",None,{"Port":{"columns":["fake_bridge","interfaces","name","tag"]},"Interface":{"columns":["name"]},"Bridge":{"columns":["controller","fail_mode","name","ports"]},"Controller":{"columns":[]},"Open_vSwitch":{"columns":["bridges","cur_cfg"]}}], 'id':0}
 
 s.send(json.dumps(get_schema))
-response = json.loads(s.recv(4096))
+response = json.loads(s.recv(409600))
 print response
 
 
